@@ -38,9 +38,9 @@ app.use(express.static("public"));
 
 
 app.get("/", function(req, res) {
-  res.send("Hello world");
+  // res.send("Welcome to the Star Wars Page!")
+  res.sendFile(path.join(__dirname, "index.html"));
 });
-
 
 
 // Scrape data from one site and place it into the mongodb db
