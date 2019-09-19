@@ -39,7 +39,7 @@ app.use(express.static("public"));
 
 
 app.get("/", function(req, res) {
-  // res.send("Welcome to the Star Wars Page!")
+
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
@@ -83,7 +83,7 @@ app.get("/scrape", function (req, res) {
 
 
 // Route for getting all Articles from the db
-app.get("/articles", function(req, res) {
+app.get("/article", function(req, res) {
   // TODO: Finish the route so it grabs all of the articles
     // Find all results from the scrapedData collection in the db
     db.Article.find()

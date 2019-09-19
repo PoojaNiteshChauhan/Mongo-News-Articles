@@ -1,4 +1,4 @@
-$.getJSON("/articles", function(data) {
+$.getJSON("/article", function(data) {
     // For each one
     for (var i = 0; i < data.length; i++) {
       // Display the apropos information on the page
@@ -17,7 +17,7 @@ $.getJSON("/articles", function(data) {
     // Now make an ajax call for the Article
     $.ajax({
       method: "GET",
-      url: "/articles/" + thisId
+      url: "/article/" + thisId
     })
       // With that done, add the note information to the page
       .then(function(data) {
@@ -49,7 +49,7 @@ $.getJSON("/articles", function(data) {
     // Run a POST request to change the note, using what's entered in the inputs
     $.ajax({
       method: "POST",
-      url: "/articles/" + thisId,
+      url: "/article/" + thisId,
       data: {
         // Value taken from title input
         title: $("#titleinput").val(),
