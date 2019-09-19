@@ -37,6 +37,11 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
+app.get("/", function(req, res) {
+  res.send("Hello world");
+});
+
+
 
 // Scrape data from one site and place it into the mongodb db
 app.get("/scrape", function (req, res) {
