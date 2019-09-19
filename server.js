@@ -7,6 +7,7 @@ var cheerio = require("cheerio");
 var expresshandlebar = require("express-handlebars")
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var path = require("path");
 
 
 var db = require("./models");
