@@ -37,6 +37,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
+
 // Scrape data from one site and place it into the mongodb db
 app.get("/scrape", function (req, res) {
   // Make a request via axios for the news section of `ycombinator`
