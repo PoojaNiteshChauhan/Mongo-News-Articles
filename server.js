@@ -27,6 +27,8 @@ app.use(express.static("public"));
 // If deployed, use the deployed database. Otherwise use the local articles database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/article";
 
+
+
 mongoose.connect(MONGODB_URI);
 
 
@@ -38,9 +40,12 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-app.get("/", function(req, res) {
 
-  res.sendFile(path.join(__dirname, "index.html"));
+
+app.get("/", function(req, res) {
+  console.log ( path.join(__dirname, "public/index.html"));
+  res.sendFile(path.join(__dirname, "public/index.html"));
+  
 });
 
 
